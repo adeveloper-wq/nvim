@@ -23,6 +23,28 @@ return {
 			lspconfig.lua_ls.setup({
 				capabilities = capabilities,
 			})
+			--lspconfig.dartls.setup({
+			--    cmd = { "dart", "language-server", "--protocol=lsp" },
+			--    filetypes = { "dart" },
+			--    root_dir = lspconfig.util.root_pattern 'pubspec.yaml',
+			--    init_options = {
+			--        closingLabels = true,
+			--        flutterOutline = true,
+			--        onlyAnalyzeProjectsWithOpenFiles = true,
+			--        outline = true,
+			--        suggestFromUnimportedLibraries = true,
+			--    },
+			--    -- root_dir = root_pattern("pubspec.yaml"),
+			--    settings = {
+			--        dart = {
+			--            completeFunctionCalls = true,
+			--            showTodos = true,
+			--            lineLength = 120,
+			--        },
+			--    },
+			--    on_attach = function(client, bufnr) end,
+			--    capabilities = capabilities,
+			--})
 
 			-- Global mappings.
 			-- See `:help vim.diagnostic.*` for documentation on any of the below functions
@@ -63,5 +85,14 @@ return {
 				end,
 			})
 		end,
+	},
+	{
+		"akinsho/flutter-tools.nvim",
+		lazy = false,
+		dependencies = {
+			"nvim-lua/plenary.nvim",
+			"stevearc/dressing.nvim", -- optional for vim.ui.select
+		},
+		config = true,
 	},
 }
