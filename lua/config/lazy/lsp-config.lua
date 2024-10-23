@@ -9,7 +9,19 @@ return {
         "williamboman/mason-lspconfig.nvim",
         config = function()
             require("mason-lspconfig").setup({
-                ensure_installed = { "lua_ls", "jdtls", "clangd", "pyright" },
+                ensure_installed = {
+                    "lua_ls",
+                    "jdtls",
+                    "clangd",
+                    "pyright",
+                    "jsonls",
+                    "tsserver",
+                    "yamlls",
+                    "gopls",
+                    "terraformls",
+                    "tflint",
+                    "helm_ls",
+                },
             })
         end,
     },
@@ -28,8 +40,33 @@ return {
             })
             lspconfig.clangd.setup({
                 capabilities = capabilities,
+                cmd = {
+                    "clangd",
+                    "--offset-encoding=utf-16",
+                },
             })
             lspconfig.pyright.setup({
+                capabilities = capabilities,
+            })
+            lspconfig.jsonls.setup({
+                capabilities = capabilities,
+            })
+            lspconfig.tsserver.setup({
+                capabilities = capabilities,
+            })
+            lspconfig.yamlls.setup({
+                capabilities = capabilities,
+            })
+            lspconfig.gopls.setup({
+                capabilities = capabilities,
+            })
+            lspconfig.terraformls.setup({
+                capabilities = capabilities,
+            })
+            lspconfig.tflint.setup({
+                capabilities = capabilities,
+            })
+            lspconfig.helm_ls.setup({
                 capabilities = capabilities,
             })
             --lspconfig.dartls.setup({
