@@ -30,3 +30,6 @@ vim.opt.colorcolumn = "80"
 
 vim.opt.smartcase = true
 vim.opt.ignorecase = true
+
+-- Use system clipboard for copy/paste
+vim.opt.clipboard="unnamedplus"
