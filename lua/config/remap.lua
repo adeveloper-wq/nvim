@@ -54,3 +54,8 @@ vim.keymap.set("n", "<leader>mr", "<cmd>CellularAutomaton make_it_rain<CR>");
 vim.keymap.set("n", "<leader><leader>", function()
     vim.cmd("so")
 end)
+
+vim.keymap.set("n", "<leader>ä", "<cmd>vertical resize +10<cr>") -- make the window biger vertically
+vim.keymap.set("n", "<leader>ö", "<cmd>vertical resize -10<cr>") -- make the window smaller vertically
+vim.keymap.set("n", "<leader>Ä", "<cmd>horizontal resize +5<cr>") -- make the window bigger horizontally by pressing shift and =
+vim.keymap.set("n", "<leader>Ö", "<cmd>horizontal resize -5<cr>") -- make the window smaller horizontally by pressing shift and -
